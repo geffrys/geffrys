@@ -1,43 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeffryOspina</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geffry Ospina — Portfolio</title>
+    <link rel="stylesheet" href="assets/index.css" />
 </head>
+
 <body>
-
-    <header>
-        <h1>GeffryOspina</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="page-wrapper">
 
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am Geffry Ospina, a passionate developer and tech enthusiast.</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>Project 1: Description of project 1.</li>
-            <li>Project 2: Description of project 2.</li>
-            <li>Project 3: Description of project 3.</li>
-        </ul>
-    </section>
+        <header class="topbar">
+            <div class="container topbar-inner">
+                <div class="brand">Geffry Ospina</div>
+                <button id="menuBtn" class="menu-btn">☰</button>
+                <nav class="nav">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </header>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can reach me at: email@example.com</p>
-    </section>  
-    <footer>
-        <p>&copy; 2025 Geffry Ospina</p>
-    </footer>
+        <main>
+
+            <!-- HERO -->
+
+            <section id="hero">
+                <div class="container section-inner">
+                    <h1 class="hero__title">Geffry Ospina</h1>
+                    <p>Discover my projects, skills, and experience as a developer.</p>
+                </div>
+            </section>
+
+            <!-- ABOUT -->
+
+            <section id="about">
+                <div class="container section-inner">
+                    <h1>About Me</h1>
+                    <p>Hello! I'm Geffry Ospina, a passionate developer with three+ years of experience in full-stack development.</p>
+                </div>
+            </section>
+
+            <!-- SKILLS -->
+
+            <section id="skills">
+                <div class="container section-inner">
+                    <h1>My Skills</h1>
+                    <ul class="skills-list">
+                        <li>JavaScript</li>
+                        <li>HTML & CSS</li>
+                        <li>React</li>
+                        <li>Node.js</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- PROJECTS -->
+
+            <section id="projects">
+                <div class="container section-inner">
+                    <h1>Projects</h1>
+                    <div class="project">
+                        <h2>ToDo Java API</h2>
+                        <p>A REST API for managing to-do tasks.</p>
+                        <p class="project__technologies">Java, Spring Boot, Spring security, MySQL, Docker</p>
+                    </div>
+
+                    <div class="project">
+                        <h2>AMCA app</h2>
+                        <p>Participated in developing new modules for pig farming and fish farming cost management.</p>
+                        <p class="project__technologies">Flutter, Dart, Firebase</p>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- CONTACT -->
+
+            <section id="contact">
+                <div class="container section-inner">
+                    <h1>Contact Me</h1>
+                    <p>If you'd like to get in touch, feel free to reach out via email or social media.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="container footer-inner">
+                <p>&copy; 2025 Geffry Ospina. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="assets/index.js"></script>
 </body>
+
 </html>
