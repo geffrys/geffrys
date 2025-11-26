@@ -5,11 +5,44 @@
 }
 
 :root {
+
+    /* colors */
+
     --bg: #0f1720;
     --card: #0f1728;
     --muted: #9aa4b2;
     --accent: #2dd4bf;
+    --accent-hover: #14b8a6;
+    --title-color: #135f56;
     --glass: rgba(255, 255, 255, 0.03);
+
+    /* typography */
+
+    --font-family: 'Inter', sans-serif;
+    --font-size-small: 14px;
+    --font-size-base: 16px;
+    --font-size-medium: 18px;
+    --font-size-large: 20px;
+    --font-size-extra-large: 32px;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+
+    /* gap */
+
+    --gap-small: 8px;
+    --gap-medium: 16px;
+    --gap-large: 24px;
+
+    /* padding */
+
+    --padding-small: 8px;
+    --padding-medium: 16px;
+    --padding-large: 24px;
+
+    /* border-radius */
+    --border-radius: 8px;
+    --border-radius-large: 16px;
+    --border-radius-circle: 50%;
 }
 
 body {
@@ -29,6 +62,32 @@ body {
     margin: 0 auto;
     padding: 24px
 }
+.display-flex {
+    display: flex;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.align-items-center {
+    align-items: center;
+}
+.section-title {
+    font-size: var(--font-size-extra-large);
+    font-weight: var(--font-weight-bold);
+    color: var(--title-color);
+    text-shadow: 0 0 2px var(--accent);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+/**
+    BUTTON STYLES
+**/
+
+
 
 /**
     HEADER STYLES
@@ -49,7 +108,7 @@ body {
 
 .brand {
     font-weight: 700;
-    font-size: 18px;
+    font-size: var(--font-size-medium);
     color: var(--accent)
 }
 
@@ -90,6 +149,39 @@ body {
     margin-bottom: 32px
 }
 
+/**
+    EXPERIENCE STYLES
+**/
+
+
+.experiences{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-medium);
+    padding: var(--padding-large) 0;
+}
+
+.experience {
+    background-color: var(--card);
+    padding: var(--padding-medium);
+    border-radius: var(--border-radius);
+}
+
+.experience ul {
+    list-style: none;
+}
+
+.experience__title {
+    font-size: var(--font-size-large);
+    margin-bottom: 8px;
+    color: var(--accent);
+}
+
+.experience__date {
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-bold);
+    color: var(--muted);
+}
 
 /**
     ABOUT STYLES
@@ -103,11 +195,13 @@ body {
 **/
 
 
-#skills ul {
+.skills-list {
     list-style: none;
     background-color: var(--card);
-    padding: 16px;
-    border-radius: 8px;
+    padding: var(--padding-medium);
+    border-radius: var(--border-radius);
+    display: flex;
+    gap: var(--gap-medium);
 }
 
 /**
@@ -116,9 +210,26 @@ body {
 
 #projects .project {
     background: var(--card);
-    border-radius: 8px;
-    padding: 16px;
+    border-radius: var(--border-radius);
+    padding: var(--padding-medium);
     margin-bottom: 24px;
+}
+
+.project__title {
+    font-size: var(--font-size-large);
+    color: var(--accent);
+}
+.project__technologies {
+    font-size: var(--font-size-small);
+    color: var(--muted);
+}
+
+/**
+    CONTACT STYLES
+**/
+
+#contact .section-inner {
+    
 }
 
 
