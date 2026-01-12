@@ -78,6 +78,8 @@ body {
     text-shadow: 0 0 2px var(--accent);
 }
 
+.lead{color:var(--muted);margin-top:8px;margin-bottom:16px;max-width:900px}
+
 a {
     color: var(--accent);
     text-decoration: underline;
@@ -128,6 +130,17 @@ a {
     border: 0;
     color: var(--muted);
     font-size: 20px
+}
+
+/* Responsive nav: show/hide on mobile */
+@media (max-width:900px){
+    .menu-btn{display:block}
+    .nav{display:none}
+    .nav.open{display:flex;flex-direction:column;gap:12px;padding-top:12px}
+}
+
+@media (min-width:901px){
+    .nav{display:flex;gap:18px}
 }
 
 /**
@@ -197,40 +210,62 @@ a {
 
 .skills-list {
     list-style: none;
-    background-color: var(--card);
-    padding: var(--padding-medium);
-    border-radius: var(--border-radius);
+    padding: 0;
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    align-items: stretch;
+    grid-auto-rows: 1fr;
+}
+
+.skill-item {
+    /* uniform colored cards with left accent stripe */
+    position: relative;
     display: flex;
-    gap: var(--gap-medium);
+    align-items: center;
+    justify-content: center;
+    min-height: 84px;
+    padding: 12px 18px;
+    border-radius: var(--border-radius);
+    background: rgba(255,255,255,0.02);
+    color: #e6fff9;
+    box-shadow: 0 10px 26px rgba(2,6,23,0.36);
+    overflow: hidden;
+    text-align: center;
+    font-weight: 600;
+}
+
+.skill-item::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(180deg, var(--accent), var(--accent-hover));
+}
+
+@media (max-width:480px){
+    .skill-item{min-height:70px;padding:10px}
 }
 
 /**
     PROJECTS STYLES
 **/
 
-#projects .project {
-    background: var(--card);
-    border-radius: var(--border-radius);
-    padding: var(--padding-medium);
-    margin-bottom: 24px;
-}
+/* projects styles set below */
 
-.project__title {
-    font-size: var(--font-size-large);
-    color: var(--accent);
-}
-.project__technologies {
-    font-size: var(--font-size-small);
-    color: var(--muted);
-}
+.projects-list{display:grid;gap:14px}
+.project{background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);padding:16px;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.35)}
+.project__title{font-size:18px;color:var(--accent);margin-bottom:6px}
+.project__technologies{color:var(--muted);font-size:13px}
 
 /**
     CONTACT STYLES
 **/
 
-#contact .section-inner {
-    
-}
+/* contact section uses .section-inner spacing above */
 
 
 /**
