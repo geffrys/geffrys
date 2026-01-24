@@ -22,7 +22,7 @@ export function Hero() {
         </h1>
 
         <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto">
-          Desarrollador Full Stack apasionado por crear experiencias digitales excepcionales
+          Desarrollador Backend apasionado por crear soluciones eficientes y escalables.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
