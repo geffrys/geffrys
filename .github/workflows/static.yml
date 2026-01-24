@@ -49,7 +49,7 @@ jobs:
       - name: List folders after build
         run: |
           echo "📂 Mostrando estructura de carpetas..."
-          ls -R ./portfolio/dists
+          ls -l .  
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
